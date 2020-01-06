@@ -11,14 +11,13 @@ console.alert('argv', sys.argv.__str__(), 'OK')
 clipboard.set('here is some output!')
 webbrowser.open('workflow://')
 
-#Hey there - this is Ari, one of the creators of Workflow. Awesome that you all are trying to get this to work!
+# Привет! Это Ари, один из создателей Workflow.  Удивительно, что вы все пытаетесь заставить это работать!
 
-#Workflow should work great with Pythonista, but as some of you mentioned, there is currently an issue which prevents Workflow's Pythonista action from working correctly. This will be fixed in an update this week! Once the update is out, here is the general process I've used for integrating workflows with Pythonista scripts:
+#Workflow должен отлично работать с Pythonista, но, как некоторые из вас упоминали, в настоящее время существует проблема, которая препятствует корректной работе действия Pythonista Workflow.  Это будет исправлено в обновлении на этой неделе!  Как только обновление вышло, вот основной процесс, который я использовал для интеграции рабочих процессов со скриптами Pythonista:
 
-#Make a new workflow with some sort of content to be passed to the Pythonista script. For example, maybe a Text action. Then add Run Script and Get Clipboard.
+# Создайте новый рабочий процесс с каким-то содержимым, которое будет передано в скрипт Pythonista.  Например, может быть текстовое действие.  Затем добавьте Run Script и Get Clipboard.
 
-#Make a corresponding Pythonista script and put its name into the Run Script action in your workflow. Start with this as your python script:
-
+# Сделайте соответствующий скрипт Pythonista и вставьте его имя в действие Run Script в вашем рабочем процессе.  Начните с этого как ваш скрипт на python:
 #import sys
 #import console
 #import clipboard
@@ -28,6 +27,6 @@ webbrowser.open('workflow://')
 #clipboard.set('here is some output!')
 #webbrowser.open('workflow://')
 
-#This example shows how Workflow can provide input to the Python script (in this case, the Python script will show its input as an alert), and how the Python script can pass output back to Workflow via the clipboard.
+# В этом примере показано, как Workflow может предоставлять входные данные для сценария Python (в этом случае сценарий Python будет отображать свои входные данные в виде предупреждения) и как сценарий Python может передавать выходные данные обратно в Workflow через буфер обмена.
 
-#(Optionally, you could preserve the clipboard by backing it up when running the workflow. At the beginning of your workflow, add Get Cilpboard and Set Variable, and give the variable a name. Then, at the end of the workflow, add Get Variable followed by Set Clipboard.)
+# (При желании вы можете сохранить буфер обмена, создав его резервную копию при запуске рабочего процесса. В начале вашего рабочего процесса добавьте Get Cilpboard и Set Variable и присвойте переменной имя. Затем в конце рабочего процесса добавьте Get  Переменная, за которой следует Set Clipboard.)

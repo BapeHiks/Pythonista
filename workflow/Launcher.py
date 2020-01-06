@@ -1,6 +1,6 @@
 # Launcher
 #
-# A Simple Launcher in Notification Center
+# Простой лаунчер в Центре уведомлений
 
 from scene import *
 import webbrowser

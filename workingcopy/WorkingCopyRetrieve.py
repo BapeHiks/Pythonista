@@ -2,7 +2,7 @@
 
 # https://gist.github.com/woolsweater/9f19bd28d944d1120353
 
-# Overwrite directory in Pythonista with Working Copy repo of the same name
+# Перезаписать каталог в Pythonista с одноименным репозиторием Working Copy
 import os
 import sys
 import urllib
@@ -16,7 +16,7 @@ import console
 import keychain
 import webbrowser
 
-# Set to true and run script to force entry of a new URL key
+# Установите значение true и запустите скрипт, чтобы принудительно ввести новый ключ URL
 RENEW_WC_CALLBACK_KEY = False
 
 def path_after_docs_dir(pth):
@@ -27,8 +27,8 @@ def last_dir_in_path(pth):
     
 def WC_callback_key(overwrite_key=False):
     service = "Working Copy"
-    # UUID appended to avoid collision with another script
-    # (generated on original dev machine)
+    # UUID добавлен, чтобы избежать столкновения с другим скриптом
+    # (генерируется на оригинальной машине разработчика)
     account = "x_callback_url_6653ee08-4c43-4453-a400-c5de315b0725"
     key = keychain.get_password(service, account)
     if overwrite_key or not key:
@@ -36,30 +36,30 @@ def WC_callback_key(overwrite_key=False):
         keychain.set_password(service, account, key)
     return key
 
-# Arriving here as callback
+# Прибытие сюда как обратный звонок
 if len(sys.argv) > 1:
     action = sys.argv[1]
-    # Success
+    # успех
     if action == "unpack":
         dest_dir = sys.argv[2]
         data = sys.argv[3]
-        # Receive zipped repo, unpack
+        # Получи репо, распакуй
         archive = ZipFile(StringIO(b64decode(data)))
-        # Overwrite directory (asking?)
+        # Перезаписать каталог (спрашивает?)
         archive.extractall(dest_dir)
-        # Refresh editor after unpacking 
+        # Обновить редактор после распаковки
         editor.reload_files()
         editor.open_file(editor.get_path())
-# Run as action
+# Запустить как действие
 else:
-    # Get path to directory of script from which action was run; this will be 
-    # the install directory, passed to the script when it's called back
+    # Получить путь к каталогу скрипта, из которого было выполнено действие; 
+    # каталог установки, переданный скрипту при его обратном вызове
     dest_dir = os.path.dirname(editor.get_path())
-    # The name of the repo in WC is assumed to be the same as the closest 
-    # enclosing directory from the activating script
+    # Предполагается, что имя репо в WC совпадает с ближайшим
+    # вложенный каталог из активирующего скрипта
     repo_name = os.path.basename(dest_dir)
-    # Path of this retrieval script starting from Pythonista's Documents
-    # directory, for the pythonista://<script-name> URL
+    # Путь этого поискового скрипта, начиная с документов Pythonista
+    # каталог, для pythonista: // <имя-сценария> URL
     self_pth = path_after_docs_dir(__file__)
     
     success_action = "pythonista://{}?action=run&argv=unpack&argv={}&argv="

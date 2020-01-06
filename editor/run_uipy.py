@@ -5,21 +5,21 @@
 import ui, editor
 
 '''
-        VERY IMPORTANT
-        For the .pyui file to be loaded as you would expect, in the
-        ui Designer you have to go to the top level (no obejects sekected),
-        you will see a field called 'Custom View Class', you need to enter
-        the key that is used for WrapInstance attr that is passed in the
-        bindings param to ui.load_view. With the example below you would
-        use MyClass.
-        bindings={'MyClass': WrapInstance(self), 'self': self})
+				ОЧЕНЬ ВАЖНЫЙ
+			Чтобы файл .pyui загружался так, как вы ожидаете, в
+			UI Designer, вы должны перейти на верхний уровень (без каких-либо объектов),
+			вы увидите поле с именем «Custom View Class», вам нужно ввести
+			ключ, который используется для атрибута WrapInstance, который передается в
+			привязки param к ui.load_view.  С примером ниже вы бы
+			использовать MyClass.
+			bindings = {'MyClass': WrapInstance (self), 'self': self})
 
-        The actual name is not important, but they need to match.
+			Фактическое имя не важно, но они должны совпадать.
 
-        This tweak was made possible by @JonB and @omz for provinding the
-        bindings param.
+			@JonB и @omz сделали возможной эту настройку для
+			bindings param.
 
-        You can see the thread at
+			Вы можете увидеть нить на
         https://forum.omz-software.com/topic/3176/use-a-pyui-file-in-another-pyui-file
 '''
 
@@ -46,22 +46,21 @@ def WrapInstance(obj):
 	
 	
 class PYUIViewer(ui.View):
-	# this acts as a normal Custom ui.View class
-	# the root view of the class is the pyui file read in
+	# это действует как обычный пользовательский ui. Посмотреть класс
+	# корневой вид класса является файл pyui читать в
 	def __init__(self, pyui_fn, *args, **kwargs):
 		ui.load_view(pyui_fn,
 		bindings={'MyClass': WrapInstance(self), 'self': self})
 		
-		# call after so our kwargs modify attrs
+		# вызова после того, как наши kwargs изменить attrs
 		super().__init__(*args, **kwargs)
 		
 if __name__ == '__main__':
 	w, h = 600, 600
 	f = (0, 0, w, h)
 	
-	fn = 'icurr.pyui'                       # .pyui file name here
-	style = 'sheet'
-	theme = _themes['sd']
+	fn = 'icurr.pyui'                       # .pyui имя файла здесь
+	style = 'sheet'	theme = _themes['sd']
 	
 	v = PYUIViewer(fn, frame=f)
 	

@@ -1,10 +1,10 @@
 # coding: utf-8
 
-# This is a self-extracting archive. Copy this script into a '.py' file located in the root
-# directory of Pythonista and call the script. It will unzip the data and extract all files to an
-# immediate sub directory of the root directory.
+# Это самораспаковывающийся архив.  Скопируйте этот скрипт в файл .py, расположенный в корне
+# каталог Pythonista и вызов скрипта.  Это распакует данные и извлечет все файлы в
+# непосредственный подкаталог корневого каталога.
 #
-# This file was generated using pyzipista (see https://github.com/marcus67/pyzipista)
+# Этот файл был создан с помощью pyzipista (see https://github.com/marcus67/pyzipista)
 #
 # Zipped Application:    gitsynchista
 # Application Home Page: https://github.com/marcus67/gitsynchista

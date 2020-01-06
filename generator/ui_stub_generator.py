@@ -6,8 +6,7 @@
 
 # https://gist.github.com/omz/dd8e999d4640db45bba4
 
-# Hackathon Challange: write code that uses the Python inspect module to find all the functions and methods in the ui module and auto generate a ui.py file that has those same functions and modules stubbed out (with pass statement) such that an editor like sublime or PyCharm on Windoze or a real computer (e.g. Mac) will do autocompletion on all functions and methods of Pythonista ui code. All winning entries must 1) deliver correct code completion for all ui methods and functions, 2) pass all PyCharm PEP8 compliance tests (esp. line length) and 3) be posted in a GitHub repo by 8am Eastern time on Monday 14 Dec 2015 time. If there are multiple entries that pass the above tests then the shortest number of (nonblank) lines of code wins.
-
+# Hackathon Challange: напишите код, который использует модуль проверки Python, чтобы найти все функции и методы в модуле пользовательского интерфейса, и автоматически сгенерируйте файл ui.py, который содержит те же самые функции и модули, которые заглушены (с помощью оператора pass), так, чтобы редактор типа  Sublime или PyCharm на Windoze или реальном компьютере (например, Mac) будут выполнять автозаполнение для всех функций и методов кода Pythonista ui.  Все выигрышные записи должны: 1) предоставлять правильное завершение кода для всех методов и функций пользовательского интерфейса, 2) пройти все тесты на соответствие PyCharm PEP8 (особенно длина строки) и 3) быть размещены в репозитории GitHub к 8:00 по восточному времени в понедельник, 14 декабря 2015 г.  ,  Если есть несколько записей, которые проходят вышеупомянутые тесты, то выигрывает самое короткое количество (непустых) строк кода.
 # Can you complete the challenge?!?
 
 # Stub generator for ui module

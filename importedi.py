@@ -3,11 +3,11 @@
 # @tdamdouni gists
 # https://gist.github.com/62fde7c2279a4fcf95385ff20073770c
 
-# file needed for an Editorial Workflow
+# файл, необходимый для Editorial Workflow
 
-# import open file in editor (Editorial) to Pythonista with the same file name and the input
+# импортировать открытый файл в редакторе (Editorial) в Pythonista с тем же именем файла и входным
 
-# Corresponding Editorial Workflow -> http://www.editorial-workflows.com/workflow/5898623862702080/55sNlKsa9xc
+# Соответствующий Editorial рабочий процесс -> http://www.editorial-workflows.com/workflow/5898623862702080/55sNlKsa9xc
 
 import clipboard
 

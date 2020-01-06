@@ -2,33 +2,33 @@
 
 Github, Pythonista 3.2, Working Copy 3.2.2, iOS 11.2.1
 
-Settings:
-1) Settings => Identities => + => Name and Email (...@user.noreply.github.com)
+Настройка:
+1) Settings => Identities => + => имя и Емейл (...@user.noreply.github.com)
 2) SSH Keys => + => Generate Key => Connect with GitHub
 
-Clone:
-1) + => Clone repository => Choose one of your repos or Enter URL (git@github.com:user/repo.git) => Clone
+Клонирование:
+1) + => Clone repository => Выберите один из ваших репо или вставте URL (git@github.com:user/repo.git) => Clone
 
-Edit repo in Pythonista:
-1) Open Pythonista => + => Import => Files => Working Copy (first time => search => enable) => Select Folder => Open
+Редактировать репозиторий в Pythonista:
+1) Открыть Pythonista => + => Import => Files => Working Copy (first time => search => enable) => Select Folder => Open
 
-Push repo:
-1) Edit => Selcet Folder in Pythonista => Open In => Save in Working Copy (first time => enable it) => Save as directory => Choose your repo
+Push репозиторий:
+1) Edit => Выбрать папку в Pythonista => Open In => Save in Working Copy (first time => enable it) => Save as directory => Choose your repo
 2) Open Working Copy => Open repo => Commit changes => select your file or all => short summary => Commit
 
-Initialize repository:
+Инициировать репозиторий (Working Copy):
 1) + => Initialize repository
-2) Repository Name => Create
-3) Add Remote
+2) Имя Репозитория => Create
+3) Status and Configuration => Add Remote
 4) Create Repository
-5) Github => Public => Confirm Create
+5) Github => Public/Private => Confirm Create
 6) Create/Import files
-7) Commit changes => select your file or all => short summary => Commit
+7) Commit changes => выберите свои файлы => краткое содержание => Commit
 
-Remove repository from your device:
-1) Open the repo folder
-2) Delete from iPxxx
-=> repo still exists at Github
+Удалить репозиторий с вашего устройства:
+1) Откройте папку репо
+2) Delete from iPhone/iPad
+=> репо все еще существует в Github
 
 Update repos:
-1) Just swipe down in the Repositories view
+1) Просто проведите пальцем вниз в представлении хранилища

@@ -26,7 +26,7 @@ def open_in_safari_vc(url):
 
 def main():
     if not appex.is_running_extension():
-        print 'This script is intended to be run from the sharing extension.'
+        print 'Этот скрипт предназначен для запуска из общего доступа.'
         return
     url = appex.get_url()
     if not url:

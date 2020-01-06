@@ -1,9 +1,11 @@
 # https://github.com/cclauss/Ten-lines-or-less/blob/master/full_screen_view.py
 
 # https://forum.omz-software.com/topic/4284/how-do-i-make-a-full-screen-button-and-handle-button-down-and-button-up-events
-#
-# press and hold less that one second to add a '.' to the title
-# press and hold for one second or more to add a '-' to the title
+
+#сделать полноэкранную кнопку и обрабатывать события, связанные с кнопкой вниз и кнопкой?
+
+# нажмите и удерживайте менее одной секунды, чтобы добавить «.» 
+# нажмите и удерживайте одну или несколько секунд, чтобы добавить «-» к заголовку
 
 from datetime import datetime as dt
 import ui

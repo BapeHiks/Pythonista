@@ -9,7 +9,7 @@ import x_callback_url
 url = 'drafts4://x-callback-url/get?uuid=YOUR_UUID&x-success=pythonista://'
 def handler(url_info):
     print(info)
-    # Do something with the data passed back to Pythonista (available through url_info.parameters)
+    # Сделайте что-нибудь с данными, переданными обратно в Pythonista (доступно через url_info.parameters)
 
 x_callback_url.open_url(url, handler)
 # --------------------

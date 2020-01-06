@@ -4,14 +4,14 @@
 # PackUI by dgelessus
 # https://github.com/dgelessus/pythonista-scripts/blob/master/UI/PackUI.py
 ################################################################################
-# Package a UI script and its corresponding .pyui file into a single,
-# self-extracting file. When run, the generated script will unpack both files,
-# allowing both running and further editing without limitations.
-# 
-# The PackUI script itself can be given a py/pyui pair to package either using
-# the (very basic) UI by running it directly, via sys.argv, or by importing it
-# and using the PackUI.pack() function. All paths are considered relative to
-# the current working directory.
+# Упаковать скрипт UI и соответствующий ему файл .pyui в один,
+# самораспаковывающийся файл.  При запуске сгенерированный скрипт распакует оба файла,
+# разрешает как запуск, так и дальнейшее редактирование без ограничений.
+#
+# Самому сценарию PackUI можно дать пару py / pyui для упаковки, используя
+# (очень простой) пользовательский интерфейс, запустив его напрямую, через sys.argv или импортировав его
+# и используя функцию PackUI.pack ().  Все пути считаются относительно
+# текущий рабочий каталог.
 ################################################################################
 
 import os.path

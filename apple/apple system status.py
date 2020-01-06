@@ -1,3 +1,4 @@
+#!python2
 # https://gist.github.com/nicolasH/6102105
 import sys
 import console

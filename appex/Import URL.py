@@ -1,3 +1,4 @@
+#!python2
 # coding: utf-8
 
 # https://gist.github.com/Gerzer/cce8d1383194d5495298

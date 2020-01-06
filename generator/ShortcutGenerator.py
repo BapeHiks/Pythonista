@@ -1,10 +1,10 @@
-# This script adds a "Webclip" shortcut to your homescreen.
-# The shortcut can be used to open a web page in full-screen mode,
-# or to launch a custom URL (e.g. a third-party app).
-# You'll be asked for a title, a URL, and an icon (from your camera roll)
+# Этот скрипт добавляет ярлык "Webclip" на домашний экран.
+# Ярлык может быть использован для открытия веб-страницы в полноэкранном режиме,
+# или для запуска пользовательского URL (например, стороннего приложения).
+# Вам будет предложено указать заголовок, URL-адрес и значок (из вашей камеры)
 
 import plistlib
-import BaseHTTPServer
+import http.server
 import webbrowser
 import uuid
 from io import BytesIO
@@ -13,7 +13,7 @@ import photos
 import notification
 import console
 
-class ConfigProfileHandler (BaseHTTPServer.BaseHTTPRequestHandler):
+class ConfigProfileHandler (http.server.BaseHTTPRequestHandler):
 	config = None
 	def do_GET(s):
 		s.send_response(200)
@@ -27,24 +27,24 @@ class ConfigProfileHandler (BaseHTTPServer.BaseHTTPRequestHandler):
 def run_server(config):
 	ConfigProfileHandler.config = config
 	server_address = ('', 0)
-	httpd = BaseHTTPServer.HTTPServer(server_address, ConfigProfileHandler)
+	httpd = http.server.HTTPServer(server_address, ConfigProfileHandler)
 	sa = httpd.socket.getsockname()
 	webbrowser.open('safari-http://localhost:' + str(sa[1]))
 	httpd.handle_request()
-	notification.schedule('Tap "Install" to add the shortcut to your homescreen.', 1.0)
+	notification.schedule('Нажмите «Установить», чтобы добавить ярлык на рабочий стол.', 1.0)
 
 def main():
-	console.alert('Shortcut Generator', 'This script adds a "Webclip" shortcut to your homescreen. The shortcut can be used to open a web page in full-screen mode, or to launch a custom URL (e.g. a third-party app). You\'ll be asked for a title, a URL, and an icon (from your camera roll).', 'Continue')
-	label = console.input_alert('Shortcut Title', 'Please enter a short title for the homescreen icon.', '', 'Continue')
+	console.alert('Shortcut Generator', 'Этот скрипт добавляет ярлык «Webclip» на домашний экран.  Ярлык можно использовать для открытия веб-страницы в полноэкранном режиме или для запуска пользовательского URL-адреса (например, стороннего приложения). Введите название, URL-адрес и значок (из вашего альбома).', 'Continue')
+	label = console.input_alert('Shortcut Title', 'Пожалуйста, введите короткое название для иконки на главном экране.', '', 'Continue')
 	if not label:
 		return
-	url = console.input_alert('Shortcut URL', 'Please enter the full URL that the shortcut should launch.', '', 'Continue')
+	url = console.input_alert('Shortcut URL', 'Пожалуйста, введите полный URL, который должен запустить ярлык.', '', 'Continue')
 	if not url:
 		return
 	icon = photos.pick_image()
 	if not icon:
 		return
-	console.show_activity('Preparing Configuration profile...')
+	console.show_activity('Подготовка профиля конфигурации...')
 	data_buffer = BytesIO()
 	icon.save(data_buffer, 'PNG')
 	icon_data = data_buffer.getvalue()
@@ -69,4 +69,5 @@ def main():
 
 if __name__ ==  '__main__':
 	main()
+
 

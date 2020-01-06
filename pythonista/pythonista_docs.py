@@ -7,4 +7,3 @@ if __name__ == '__main__':
 	web_view = ui.WebView(name='Pythonista Documentation')
 	web_view.load_url(fmt.format(app_path))
 	web_view.present()  # present Pythonista docs in a ui.WebView
-

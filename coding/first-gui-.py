@@ -1,57 +1,57 @@
-# A very simple first experiment in GUI creation using Pythonista
-# on an iPad2. Creates two square buttons which change colour and
-# make a noise when touched. It's modelled on what I vaguely remember
-# of the innards of MS Windows
+# Очень простой первый эксперимент по созданию GUI с использованием Pythonista
+# на iPad2. 
+# шуметь при прикосновении. 
+# внутренностей MS Windows
 
 from scene import *
 from random import random
 import sound
 
-# Base class for controls
+# Базовый класс для элементов управления
 class Window (Layer):
-	# Create a default window
+	# Создать окно по умолчанию
 	def __init__(self,p,bounds):
 		Layer.__init__(self, bounds)
 		
-		# Add ourself to parent layer list
+		# Добавьте себя в список родительских слоев
 		if p: p.add_layer(self)
 		
 		self.background=Color(1,1,1)
-	#                       self.image = 'Snake'
+	#                       self.image = 'Змея'
 	
-		# Default to a red border of thickness 1.0
+		# По умолчанию красная граница толщиной 1,0
 		self.stroke = Color(1,0,0)
 		self.stroke_weight=1
 		
-	# Skeleton functions to be overriden
+	# Скелетные функции должны быть переопределены
 	def touch_began(self,touch): pass
 	def touch_moved(self,touch): pass
 	def touch_ended(self,touch): pass
 	
-#-------------------------------------------------
+#0-
 class Button (Window):
 	def touch_began(self,touch):
 		new_color = Color(random(), random(), random())
 		self.animate('background', new_color, 1.0)
 		sound.play_effect('Crashing')
-#-------------------------------------------------
+#0-
 
 class MyApp (Scene):
 
-	# This runs before any frames or layers are drawn
+	# Это выполняется до того, как нарисованы какие-либо кадры или слои
 	def setup(self):
 	
-		# This is our background canvas (whole display)
+		# Это наш фоновый холст (весь дисплей)
 		p = self.root_layer = Layer(self.bounds)
 		
 		center = self.bounds.center()
 		
-		# Create 2 primitive buttons as children of root layer
+		# Создайте 2 примитивные кнопки в качестве дочерних элементов корневого слоя
 		Button(p,Rect(center.x + 80, center.y + 80, 128, 128))
 		Button(p,Rect(center.x - 80, center.y - 80, 128, 128))
 		
 	def draw(self):
-		# White background - basically display.clear() before redraw
+		# Белый фон - в основном display.clear () перед перерисовкой
 		background(1, 1, 1)
 		
 		self.root_layer.update(self.dt)
@@ -70,4 +70,3 @@ class MyApp (Scene):
 		if l is Window: l.touch_ended(touch)
 		
 run(MyApp())
-

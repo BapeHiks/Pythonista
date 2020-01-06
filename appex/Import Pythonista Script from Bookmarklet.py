@@ -1,3 +1,4 @@
+#!python2
 # I got help from here: http://twolivesleft.com/Codea/Talk/discussion/1652/what-others-do%3A-pythonista/p1
 # I got help from here: http://www.macdrifter.com/2012/09/pythonista-trick-url-to-markdown.html
 # I got help from here: http://www.macstories.net/tutorials/from-instapaper-and-pythonista-to-dropbox-and-evernote-as-pdf/

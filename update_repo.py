@@ -7,7 +7,7 @@ import sys
 from urllib.parse import urlencode, quote
 import webbrowser
 
-key = "CCG7GYKWV"
+key = "KP3JWCFAN"
 
 def get_path():
 	regex= r"\/Documents\/(.+)$"

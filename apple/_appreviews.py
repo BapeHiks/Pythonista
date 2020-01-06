@@ -1,4 +1,4 @@
-
+#!python2
 # Pythonista script
 # Script name: getreviews.py
 # Author: Olivier HO-A-CHUCK

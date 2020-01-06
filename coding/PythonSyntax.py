@@ -5,16 +5,16 @@
 intro = '''Remove tripple quotes around the sections to run the code therein\n'''
 __version__ = "0.2"
 __py_version__ = "2.7x"
-print "Version: "+__version__+'\nPython: '+__py_version__+'\n'
-print intro
+print("Version: "+__version__+'\nPython: '+__py_version__+'\n')
+print(intro)
 
 def title1(name=''):
-	print '\n' + name.upper() + ':'
-	print '-'*65
+	print('\n' + name.upper() + ':')
+	print('-'*65)
 	
 def title2(name=''):
-	print '\n' + name.capitalize()
-	print '-'*65
+	print('\n' + name.capitalize())
+	print('-'*65)
 	
 def newline():
 	print('')
@@ -76,32 +76,32 @@ Comming soon
 #----------------------------------------------------------------------
 
 
-print "\n*** Beginner code follows this line: ***\n"
+print("\n*** Код начинающего следует за этой строкой: ***\n")
 # *** BEGINNER ***
 # PRINTING
 title1('printing')
 #----------------------------------------------------------------------
 """
-# Print a string
-print "Hello World"
+# Распечатать строку
+ печать "Hello World"
 
-# Print multiple strings
-print "Hello","World"
+# Распечатать несколько строк
+ печать "Привет", "Мир"
 
-# Join/Concatenate two strings (gives errors if not strings)
-print "Hello" + "World"
+# Соединить / объединить две строки (выдает ошибки, если не строки)
+ печать "Привет" + "Мир"
 
-# Joining two strings with spaces
-print "Hello" + " World"
+# Соединение двух строк с пробелами
+ печать "Привет" + "Мир"
 
-# Printing numbers
-print 27
+# Печать номеров
+ печать 27
 
-# Another way to print (only way in python 3+)
-print("Hello World")
-#I've updated the print statements in this script for python 3 users
+# Еще один способ печати (только в Python 3+)
+печать («Hello World»)
+# Я обновил операторы печати в этом скрипте для пользователей Python 3
 
-# Print an empty line (useful for separating code output)
+# Вывести пустую строку (полезно для разделения вывода кода)
 print('')
 """
 #----------------------------------------------------------------------
@@ -1024,14 +1024,14 @@ print(content.read())
 #----------------------------------------------------------------------
 
 
-print "\n*** Advanced code follows this line: ***\n"
+print("\n*** Advanced code follows this line: ***\n")
 # *** ADVANCED ***
 #----------------------------------------------------------------------
 None
 #----------------------------------------------------------------------
 
 
-print "\n*** Popular Modules code follows this line: ***\n"
+print("\n*** Popular Modules code follows this line: ***\n")
 # *** POPULAR MODULES ***
 #----------------------------------------------------------------------
 # Date and Time
@@ -1289,7 +1289,7 @@ import tokenize
 #----------------------------------------------------------------------
 
 
-print "\n*** Example code follows this line: ***\n"
+print("\n*** Example code follows this line: ***\n")
 # *** EXAMPLES ***
 #----------------------------------------------------------------------
 None

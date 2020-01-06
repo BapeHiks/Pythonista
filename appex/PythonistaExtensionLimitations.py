@@ -2,17 +2,16 @@
 
 # https://forum.omz-software.com/topic/1988/launching-pythonista-from-1-6b-app-extension
 
-# I'm trying to write a script for the 1.6 app extension that will:
+# Я пытаюсь написать скрипт для расширения приложения 1.6, который будет:
 
-# Take some text passed in from the share sheet
-# Format the text in a specific way
-# Place the formatted text on the pasteboard
-# Launch Pythonista and run another script that will take the text on the pasteboard and do something with it.
+ # Возьмите какой-то текст, переданный с листа
+ # Форматировать текст определенным образом
+ # Поместите отформатированный текст на монтажную панель
+ # Запустите Pythonista и запустите другой скрипт, который возьмет текст на монтажном столе и что-то с ним сделает.
 
-# Is it possible to launch a pythonista:// URL from the app extension? If not, is it possible to do something with objc_util?
+ # Можно ли запустить Pythonista:// URL из расширения приложения?  Если нет, то можно ли что-то сделать с помощью objc_util?
 
-# Worst case, I can make it a two-step process but it would be great to have it in one place.
-
+ # В худшем случае, я могу сделать это двухэтапным процессом, но было бы здорово иметь его в одном месте.
 import appex
 import clipboard
 import webbrowser 

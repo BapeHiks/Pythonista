@@ -6,11 +6,11 @@ import webbrowser
 
 def diff(from_, to_, wrap_col):
   '''
-  Create a diff and write it to a file, so that it can be opened in the browser.
-  '''
-  # Since from_ and to_ come as lists of words, we need
-  # to put them back together into sentences and then
-  # split at line-breaks to get a list of lines for the diff.
+   Создайте diff и запишите его в файл, чтобы его можно было открыть в браузере.
+  '''
+   # Так как from_ и to_ приходят как списки слов, нам нужно
+   # собрать их обратно в предложения, а затем
+   # разбить на разрывы строк, чтобы получить список строк для сравнения.
   from_ = ' '.join(from_).splitlines()
   to_ = ' '.join(to_).splitlines()
   

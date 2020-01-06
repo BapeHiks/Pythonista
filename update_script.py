@@ -6,7 +6,7 @@ import sys
 def main():
 	print(sys.argv)
 	if len(sys.argv) <= 1:
-		print("No changes detected.")
+		print("Изменений не обнаружено.")
 		quit()
 		
 	editor.open_file(sys.argv[1])

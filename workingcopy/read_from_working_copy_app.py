@@ -1,23 +1,23 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-# Workflow: * In _Working Copy_ open a GitHub repository that you want copied into _Pythonista_ * if your needs are more modest, you can even select a single file or folder * Click the Share icon at the upper right corner of the Working Copy screen * Click Run Pythonista Script * Click on this script * Click the run button
+# Рабочий процесс: * В _Working Copy_ откройте репозиторий GitHub, который вы хотите скопировать в _Pythonista_ *, если ваши потребности более скромны, вы даже можете выбрать один файл или папку * Щелкните значок «Поделиться» в верхнем правом углу экрана «Рабочая копия» * Нажмите 
 
-# When you [return to Pythonista](pythonista://) your files should be in the 'from Working Copy' directory.
+# Когда вы [возвращаетесь к Pythonista] (pythonista: //), ваши файлы должны находиться в каталоге «from Working Copy».
 
-## Pythonista --> Working Copy: Working Copy has a "__save to Working Copy__" Share Sheet action (you might have to enable in Share Sheet, More...)
+## Pythonista -> Рабочая копия: Рабочая копия имеет действие «Общий лист» __save to Working Copy (вам может потребоваться включить в «Общий лист», Подробнее ...)
 
-# Workflow A -- a single file: * Open the file of interest in the Pythonista editor * Click the wrench icon at the upper right * Click the "Share..." button * Click "Save in Working Copy" button * Select the repo that you want to save the file into * Click "Save As..." * Change the filename if you want to and click "Save As..." again * Click "Just Save" if you want to bundle multiple files into a single commit --or-- Type your commit message and click "Commit"
+# Рабочий процесс A - один файл: * Откройте интересующий файл в редакторе Pythonista * Нажмите значок гаечного ключа в правом верхнем углу * Нажмите кнопку "Поделиться ..." * Нажмите кнопку "Сохранить в рабочей копии" * Выберите репозиторий 
 
-# Workflow B -- a folder or a file: * Click `Edit` in the Pythonista file browser * Select the folder or file of interest * Click the Share icon at the bottom of the file browser * Click "Save in Working Copy" button * Select "Import as Repository" or "Save as Directory"
+# Рабочий процесс B - папка или файл: * Нажмите «Редактировать» в браузере файлов Pythonista * Выберите интересующую папку или файл * Нажмите значок «Поделиться» в нижней части браузера файлов * Нажмите кнопку «Сохранить в рабочей копии» * 
 
-# Note: When selecting multiple folders or multiple files, only the first one is processed.
+# Примечание. При выборе нескольких папок или нескольких файлов обрабатывается только первая.
 
-# __Now we have an end to end workflow: GitHub --> Working Copy --> Pythonista --> Working Copy --> GitHub__
+# __Теперь у нас есть сквозной рабочий процесс: GitHub -> Working Copy -> Pythonista -> Working Copy -> GitHub__
 
-# See: https://forum.omz-software.com/topic/2382/git-or-gist-workflow-for-pythonista/24
+# См .: https://forum.omz-software.com/topic/2382/git-or-gist-workflow-for-pythonista/24.
 
-# Appex script to copy a git file, folder, or repo from the Working Copy app
+# Сценарий Appex для копирования файла, папки или репозитория Git из приложения «Рабочая копия»
 
 import appex, os, shutil
 
@@ -41,11 +41,11 @@ def main():
             print(shutil.copy2(srce_path, dest_path))
         print('{} was copied to {}'.format(file_name, file_path))
     else:
-        print('''* In Working Copy app select a repo, file, or directory to be
-copied into Pythonista.  Click the Share icon at the upperight.  Click Run
-Pythonista Script.  Pick this script and click the run button.  When you return
-to Pythonista the files should be in the 'from Working Copy'
-directory.'''.replace('\n', ' ').replace('.  ', '.\n* '))
+        print('''*В приложении «Рабочая копия» выберите репозиторий, файл или каталог
+скопированы в Pythonista. 
+Скрипт Pythonista. 
+в Pythonista файлы должны быть в «из рабочей копии»
+каталог.'''.replace('\n', ' ').replace('.  ', '.\n* '))
 
 if __name__ == '__main__':
     main()
