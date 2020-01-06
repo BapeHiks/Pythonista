@@ -4,19 +4,20 @@
 
 # coding: utf-8
 #
-# This script is meant to be used from the Pythonista action extension when Safari is showing
-# a GitHub Pull Request and will ask Working Copy to merge+pull the pull-request thus fullfulling it.
-# You need to already have this repository cloned in Working Copy.
+# Этот скрипт предназначен для использования из расширения действий Pythonista, когда Safari показывает
+# a GitHub Pull Request и попросит Рабочую копию слить pull pull-запрос, таким образом, полностью заполнив его.
+# Вам уже нужно клонировать этот репозиторий в рабочей копии.
 #
-# It only works on public repositories, since the script lacks a way to authorize, but things
-# happening in Working Copy can be fully authorized with either SSH Key or username / password.
+# Он работает только в общедоступных репозиториях, поскольку в сценарии отсутствует способ авторизации, но
+# происходящее в рабочей копии может быть полностью авторизовано либо с помощью ключа SSH, либо имени пользователя / пароля
 #
+# Вы можете прочитать о Pythonista на
 # You can read about Pythonista at
 #   http://omz-software.com/pythonista/
 # and Working Copy at
 #   https://WorkingCopyApp.com/
-#
-# I would like to hear your feedback and I am @palmin on Twitter.
+
+# Я хотел бы услышать ваши отзывы, и я @palmin в Твиттере.
 #
 
 import appex
@@ -26,7 +27,7 @@ import urllib
 import webbrowser
 from objc_util import *
 
-# You need to fill out key with the value from URL Callback settings in Working Copy.
+# Вам необходимо заполнить ключ значением из настроек URL Callback в рабочей копии.
 key = ""
 
 def main():
@@ -41,13 +42,13 @@ def main():
 		url = appex.get_url()
 		
 	if url:
-		# Parse and make sure this is pull request
+		# Разберите и убедитесь, что это запрос на включение
 		m = re.compile('^https:\/\/github\.com/([^/]+)\/([^/]+)/pull/([0-9]+)$').match(url)
 		if m == None:
 			print("URL does not look like GitHub Pull Request:\n " + url)
 			quit()
 			
-		# fetch Pull Request through API
+		# получить запрос на извлечение через API
 		owner = m.group(1)
 		repo = m.group(2)
 		pr = m.group(3)
@@ -55,32 +56,32 @@ def main():
 		req = requests.get(url)
 		json = req.json()
 		
-		# pick out what we need
+		# выбрать то, что нам нужно
 		baseRemote = json["base"]["repo"]["clone_url"]
 		baseBranch = json["base"]["ref"]
 		headRemote = json["head"]["repo"]["clone_url"]
 		headBranch = json["head"]["ref"]
 		
-		# We need to checkout branch, pull latest commits, merge and push back.
-		# This can be chained into one x-callback-url command for nicer syntax.
-		# Read more at
-		#   http://workingcopyapp.com/url-schemes.html#chain
+		# Нам нужно оформить ветку, получить последние коммиты, объединить и вернуть обратно.
+		# Это может быть объединено в одну команду x-callback-url для лучшего синтаксиса.
+		# Узнайте больше на
+		# http://workingcopyapp.com/url-schemes.html#chain
 		callback = "working-copy://x-callback-url/chain?repo=%s&key=%s" % (urllib.quote(baseRemote), urllib.quote(key))
 		
-		# make sure base branch is checked out
+		# убедитесь, что базовая ветвь проверена
 		callback += "&command=checkout&branch=%s" % (urllib.quote(baseBranch))
 		
-		# pull to get latest commits
+		# тянуть, чтобы получить последние коммиты
 		callback += "&command=pull"
 		
-		# merge with head, creating and fetching from head remote if missing
+		# слияние с головой, создание и извлечение из головы удаленного, если отсутствует
 		callback += "&command=merge&branch=%s&remote=%s&create=1" % (urllib.quote(headBranch), urllib.quote(headRemote))
 		
-		# push back merge commit to conclude
+		# отодвинуть коммит коммит к завершению
 		callback += "&command=push"
 		print('callback: %s') % (callback)
 		
-		# webbrowser.open does not work from action extension
+		# webbrowser.open не работает с расширением действия
 		app=UIApplication.sharedApplication()
 		url=nsurl(callback)
 		app._openURL_(url)
