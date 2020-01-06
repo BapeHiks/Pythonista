@@ -1,11 +1,11 @@
 # Pythonista
 
-Collection of Python Scripts written for [Pythonista iOS App](http://omz-software.com/pythonista/).
+Коллекция скриптов Python, написанных для [Pythonista iOS App](http://omz-software.com/pythonista/).
 
-I try to sort these scripts into @Folders after functionality, purpose or use for.
+Я пытаюсь отсортировать эти скрипты в @Folders по функциональности, назначению или использованию для.
 
-The most of them are forked from other github repositories but referenced at the beginning of each script, others are collected from the [omz:forum](https://forum.omz-software.com), or other coding communities.
+Большинство из них разветвляются из других репозиториев github, но на них ссылаются в начале каждого скрипта, остальные собраны из[omz:forum](https://forum.omz-software.com), или другие сообщества.
 
-I maintain this repo as a backup for all my Pythonista Scripts.
+Я поддерживаю этот репозиторий как резервную копию всех моих скриптов Pythonista.
 
-Changes, Forks and Pulls are welcomed for the wealth of the Pythonista Community.
+Изменения, forks и pull приветствуются для богатства сообщества Pythonista.
