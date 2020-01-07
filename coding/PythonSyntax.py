@@ -1,4 +1,5 @@
-# -*- coding: utf -*-
+#!python2
+# coding: utf-8
 
 # https://gist.github.com/TutorialDoctor/dda76e58fc43d7375856
 
