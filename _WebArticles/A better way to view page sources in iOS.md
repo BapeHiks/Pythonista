@@ -1,8 +1,8 @@
-# A better way to view page sources in iOS
+# Лучший способ просмотра источников страниц в iOS
 
 _Captured: 2015-11-07 at 00:53 from [mygeekdaddy.net](http://mygeekdaddy.net/2014/09/22/a-better-way-to-view-page-sources-in-ios/)_
 
-With release of iOS 8, the number of imaginative apps that have come out in the last couple of days has been amazing. One of the newly touted apps, [View Source](https://itunes.apple.com/us/app/view-source-html-javascript/id917660039?mt=8&uo=4), is a mix of app and iOS extension that can let a user view the page source of a web page on their iOS device.
+С выпуском iOS 8 число приложений с оригинальным дизайном, появившихся в последние пару дней, было просто потрясающим. Одно из недавно рекламируемых приложений, [View Source](https://itunes.apple.com/us/app/view-source-html-javascript/id917660039?mt=8&uo=4), is a mix of app and iOS extension that can let a user view the page source of a web page on their iOS device.
 
 ![](http://share.mygeekdaddy.me/_img_BLOGX_View_source_in_iOS_2014_09_22_223210.png)
 
@@ -14,7 +14,7 @@ Looking at the potential of View Source, I started thinking there had to be a be
 
 #### Doing it my own way
 
-In all the gushing over iOS extensions, I think we (or at least I did) forgot our roots in iOS automation. Most iOS apps have a native URL that will allow you to open the app from Safari. One of my favorite apps is [Textastic](https://itunes.apple.com/us/app/textastic-code-editor-for/id550156166?mt=8&uo=4), can [be used to open a webpage to see the source code](http://www.textasticapp.com/v4/manual/x-callback-url.html).
+Я думаю, что во всех потрясениях над расширениями iOS мы (или, по крайней мере, я) забыли свои корни в автоматизации iOS. Большинство приложений для iOS имеют собственный URL, который позволяет открывать приложение из Safari. Одно из моих любимых приложений [Textastic](https://itunes.apple.com/us/app/textastic-code-editor-for/id550156166?mt=8&uo=4), can [be used to open a webpage to see the source code](http://www.textasticapp.com/v4/manual/x-callback-url.html).
 
 > In addition to _x-callback-url_ support, the textastic:// scheme can be used to easily download the server response of HTTP URLs. You can use this feature to **view the source code of a website** or download files into Textastic. This is what you need to do: 
 > 

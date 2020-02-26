@@ -1,5 +1,5 @@
 # coding: utf-8
-
+''' Что то связанное с напоминаниями'''
 # https://gist.github.com/philgruneich/32c1568fd1feb61487a3
 
 import reminders
@@ -24,7 +24,7 @@ def completeReminder():
 		callback = 'twodo://'
 	
 	if len(todo) == 0:
-		return dialogs.hud_alert('You don\'t have any reminder left to do.')
+		return dialogs.hud_alert('У вас нет напоминания, чтобы сделать.')
 	
 	if _title:
 		
@@ -33,13 +33,13 @@ def completeReminder():
 		if len(this) == 1:
 			this = this[0]
 		elif len(this) <= 0:
-			return dialogs.hud_alert('You don\'t have any reminder matching these terms.')
+			return dialogs.hud_alert('У вас нет напоминания, соответствующего этим условиям.')
 		else:
 			todomap = {x.title: x for x in this}
-			this = dialogs.list_dialog('Multiple matches', todomap.keys())
+			this = dialogs.list_dialog('Несколько выбранных', todomap.keys())
 			
 			if not this:
-				return dialogs.hud_alert('You gotta pick the correct reminder.')
+				return dialogs.hud_alert('Вы должны выбрать правильное напоминание.')
 			else:
 				this = todomap.get(this)
 				
@@ -48,7 +48,7 @@ def completeReminder():
 		this = dialogs.list_dialog('Multiple matches', todomap.keys())
 			
 		if not this:
-			return dialogs.hud_alert('You gotta pick the correct reminder.')
+			return dialogs.hud_alert('Вы должны выбрать правильное напоминание.')
 		else:
 			this = todomap.get(this)
 	

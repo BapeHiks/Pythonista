@@ -1,3 +1,4 @@
+# coding: utf-8
 # https://gist.github.com/Mr-Coxall/43b4d6bf83f3983a28a7358aa842795a
 
 # Автор: г-н Коксалл

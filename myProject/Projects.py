@@ -18,7 +18,7 @@ import ui
 import os
 import console
 import sound
-import Documents
+from myProject import Documents
 import Edit
 import Settings
 import SettingsSheet

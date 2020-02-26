@@ -21,7 +21,7 @@ console.error = console.log;
    window.onerror = (function(error, url, line,col,errorobj) {
    console.log("error: "+error+"%0Aurl:"+url+" line:"+line+"col:"+col+"stack:"+errorobj);})
 
-console.log("logging activated");
+console.log("ведение журнала активировано");
 
 # --------------------
 

@@ -1,5 +1,5 @@
+# coding: utf-8
 # https://gist.github.com/Subject22/6d340d7e2ef9a8f3ff1b49c48af57e7e
-
 def dfs(graph, start):
     stack = [(None, start)]
     visited = {start}
@@ -25,7 +25,7 @@ def bfs(graph, start):
 
 
 def shortest_path(graph, start, end):
-    paths = {None: []}  # {destination: [path]}
+    paths = {None: []}  # # {destination: [path]} —— {назначение: [путь]}
 
     for parent, child in bfs(graph, start):
         paths[child] = paths[parent] + [child]
@@ -33,7 +33,7 @@ def shortest_path(graph, start, end):
         if child == end:
             return paths[child]
 
-    return None # or raise appropriate exception
+    return None # или поднять соответствующее исключение
 
 
 graph = {'A': {'B', 'C','E'},

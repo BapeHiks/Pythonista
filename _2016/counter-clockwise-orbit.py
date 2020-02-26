@@ -1,11 +1,9 @@
+#coding: utf-8
 # https://forum.omz-software.com/topic/3754/show-all-scene-child-nodes/4
-
+'''
+Попытка создать вращающуюся Землю на эллиптической орбите вокруг Солнца.'''
 import scene
 from math import pi
-
-'''
-Trying to create a rotating earth in an eliptical orbit around the sun.
-'''
 
 
 class SolorSystemScene(scene.Scene):

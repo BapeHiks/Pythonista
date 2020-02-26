@@ -6,15 +6,15 @@
 
 # https://forum.omz-software.com/topic/2784/feature-request-pythonista-built-in-file-picker/2
 
-# I've started working on a file picker dialog that I might add to the dialogs module. You can find the code here:
+# Я начал работать над диалогом выбора файлов, который мог бы добавить в модуль диалогов. Вы можете найти код здесь:
 
 # → File Picker.py (works in Pythonista 2 and 3)
 
-# The API isn't exactly like you suggested, but similar, and quite extensible. As a demo, I've implemented an alternative "data source" that shows files and folders from an FTP server instead of the local file system. It would easily be possible to build a Zip file browser with this as well...
+# API не совсем такой, как вы предлагали, но похожий и достаточно расширяемый. В качестве демонстрации я реализовал альтернативный «источник данных», который показывает файлы и папки с FTP-сервера вместо локальной файловой системы. С этим легко можно было бы создать браузер файлов Zip ...
 
-# The idea is basically that you can subclass TreeNode to represent whatever kind of tree structure you need. The TreeDialogController gets one TreeNode as its root and a couple of options (multiple selection etc.). The TreeNode is then responsible for loading its children (each of the children is also a TreeNode), and each node has a title/icon that is shown in the table view. For cases when a node might take a relatively long time to load its children, TreeDialogController has an async_mode option that causes it to automatically dispatch the loading to a background thread, and to show a spinner overlay while loading.
+# Идея заключается в том, что вы можете создать подкласс TreeNode для представления любого типа древовидной структуры, которая вам нужна. TreeDialogController получает один TreeNode в качестве root и пару опций (множественный выбор и т. Д.). Затем TreeNode отвечает за загрузку своих дочерних элементов (каждый из дочерних элементов также является TreeNode), и у каждого узла есть title/icon, который отображается в табличном представлении. В случаях, когда узлу может потребоваться относительно долгое время для загрузки его дочерних элементов, TreeDialogController имеет параметр async_mode, который заставляет его автоматически отправлять загрузку в фоновый поток и отображать наложение спиннера во время загрузки.
 
-# Overall, the UI is very close to Pythonista's own directory picker, i.e. I'm using the same icons, table view animations, etc
+# В целом, пользовательский интерфейс очень близок к собственному средству выбора каталогов Pythonista, то есть я использую те же значки, анимацию табличного представления и т. Д.
 
 import ui
 import os

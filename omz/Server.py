@@ -1,4 +1,5 @@
-'''A simple HTTP server that allows you to view files in Pythonista from a web browser in your local network (or on this device). The HTML pages are rendered using the jinja2 template engine.'''
+#coding: utf-8
+'''Простой HTTP-сервер, который позволяет просматривать файлы в Pythonista из веб-браузера в локальной сети (или на этом устройстве). HTML-страницы обрабатываются с использованием шаблонизатора jinja2.'''
 
 from SimpleHTTPServer import SimpleHTTPRequestHandler
 import urlparse
@@ -58,11 +59,11 @@ if __name__ == '__main__':
 	os.chdir(os.path.expanduser('~/Documents'))
 	from BaseHTTPServer import HTTPServer
 	server = HTTPServer(('', PORT), MyRequestHandler)
-	print 'Local HTTP server URL:'
+	print 'URL локального HTTP-сервера:'
 	print 'http://%s.local:%i' % (gethostname(), PORT)
-	print 'Tap the stop button in the editor or console to stop the server.'
+	print 'Нажмите кнопку остановки в редакторе или консоли, чтобы остановить сервер.'
 	try:
 		server.serve_forever()
 	except KeyboardInterrupt:
 		server.shutdown()
-		print 'Server stopped'
+		print 'Сервер остановлен'

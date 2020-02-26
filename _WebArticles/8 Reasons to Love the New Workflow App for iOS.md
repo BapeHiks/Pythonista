@@ -2,7 +2,7 @@
 
 _Captured: 2015-11-16 at 01:28 from [www.geekswithjuniors.com](http://www.geekswithjuniors.com/note/8-reasons-to-love-the-new-workflow-app-for-ios.html)_
 
-_This article was meant to be published on the same day when iOS 8 was available. But, we all know the story how **Workflow** was rejected for having buttons to launch itself in the **Today View** extension. After waiting for months (and removing said feature), finally Workflow is available for everyone today._
+_Эта статья должна была быть опубликована в тот же день, когда была доступна iOS 8. Но все мы знаем историю о том, как **Workflow** был отклонен из-за наличия кнопок для запуска в расширении **Today View**. После ожидания в течение нескольких месяцев (и удаления упомянутой функции), наконец, рабочий процесс доступен для всех сегодня._
 
 If you love iOS automation, you're probably already aware of [Launch Center Pro](http://www.geekswithjuniors.com/note/10-reasons-to-love-launch-center-pro-23.html) and [Drafts](http://www.geekswithjuniors.com/note/8-reasons-to-love-drafts-4.html). Together with URL Schemes and [x-callback-url](http://x-callback-url.com), they form the backbones of iOS automation. Well, today we have a new app that hopefully can make it easy for non-geeks to create their own workflows. And, here are a few reasons why I believe you would love the new Workflow app.
 

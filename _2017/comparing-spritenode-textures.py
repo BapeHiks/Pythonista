@@ -1,9 +1,9 @@
 # https://forum.omz-software.com/topic/4345/how-to-compare-spritenode-textures
+'''
+Когда вы используете имя изображения для инициализации SpriteNode, он каждый раз создает новый объект текстуры (даже если вы используете одно и то же имя изображения дважды).
 
-When you use an image name for initializing a SpriteNode, it creates a new texture object every time (even if you use the same image name twice).
-
-I would recommend creating the Texture object separately:
-
+Я бы порекомендовал создать объект текстуры отдельно:
+'''
 from scene import *
 
 tex = Texture('plc:Brown_Block')

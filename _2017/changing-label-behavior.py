@@ -8,7 +8,7 @@ NSLineBreakByCharWrapping = 1
 NSLineBreakByClipping = 2
 NSLineBreakByTruncatingHead = 3
 NSLineBreakByTruncatingTail = 4
-NSLineBreakByTruncatingMiddle = 5 # Default for button labels.
+NSLineBreakByTruncatingMiddle = 5 # По умолчанию для меток кнопок.
 
-b = ui.Button() # Your button (doesn't need to be created here, can come from somewhere else, like a UI file).
-objc_util.ObjCInstance(b).button().titleLabel().setLineBreakMode(NSLineBreakByWordWrapping) # You can use any of the line break modes listed above.
+b = ui.Button() # Ваша кнопка (здесь не нужно создавать, она может быть откуда-то еще, например, файл UI).
+objc_util.ObjCInstance(b).button().titleLabel().setLineBreakMode(NSLineBreakByWordWrapping) # Вы можете использовать любой из перечисленных выше режимов разрыва строки.

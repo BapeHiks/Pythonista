@@ -1,5 +1,5 @@
 # https://forum.omz-software.com/topic/3692/auto-fill-correct-blowing-up-editor-app/6
-
+"""Отключить Jedi"""
 import editor
 editor._get_editor_tab().editorView().completionProvider=None
 

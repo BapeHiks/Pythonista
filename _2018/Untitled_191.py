@@ -20,7 +20,7 @@ current_tile=tiles[0]
 
 mapsize=100
 
-#map is just a nxn array of indexes to texture
+#карта это просто nxn массив индексов для текстуры
 themap=[[random.randint(0,len(tiles)-1) for _ in range(mapsize)] for _ in range(mapsize)]
 
 class Arrow (SpriteNode):

@@ -10,7 +10,7 @@ import random
 
 response = ""
 while response != "exit":
-	print("Your random number is:", random.randint(0, 10))
+	print("Ваше случайное число:", random.randint(0, 10))
 	response = input()
 # --------------------
 

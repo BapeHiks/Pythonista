@@ -1,8 +1,8 @@
 # http://omz-forums.appspot.com/pythonista/post/5862307733176320
 # https://gist.github.com/pysmath/59c9b38e127827e2d6ed
-''' This script allows you to copy a .py script to the iOS clipboard and then use Open In...
-to have that script saved in Pythonista.  This requires both the Workflow and Pythonista apps
-and the workflow at https://workflow.is/workflows/8cdee57f79664205a6a565c9cbdb3d48 '''
+''' Этот скрипт позволяет скопировать скрипт .py в буфер обмена iOS, а затем использовать Open In...
+сохранить этот скрипт в Pythonista. Это требует как приложений Workflow, так и приложений Pythonista.
+И рабочий процесс вhttps://workflow.is/workflows/8cdee57f79664205a6a565c9cbdb3d48 '''
 
 import clipboard
 import console

@@ -43,7 +43,7 @@ def get_read_url():
 
 def main():
 	if key == "":
-		print("You need to fill out key with value from Working Copy settings.")
+		print("Вам необходимо заполнить ключ со значением в настройках Working Copy.")
 		quit()
 		
 	url = get_write_url()

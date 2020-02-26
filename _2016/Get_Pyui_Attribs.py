@@ -8,16 +8,16 @@
 #---Created: 02/19/2017
 #---Last Modified: 02/20/2017
 
-#---Purpose: This Pythonista script allows the selection of a 
-    pyui file from any folder in the Pythonista documents 
-    directory. Once selected, the script mines the attributes 
-    of the view and subview objects in the file and converts 
-    them to text that can be modified slightly and entered as 
-    code into the associated py file. This makes for an 
-    easier coding transistion for scripts that use a pyui 
-    file to be merged into a single py file. The attributes 
-    are displayed in the console and written to the clipboard 
-    for easy copying to the py script.
+#---Цель: этот скрипт Pythonista позволяет выбрать
+    pyui файл из любой папки в документах Pythonista
+    каталог. После выбора скрипт добывает атрибуты
+    объектов представления и подпредставления в файле и преобразует
+    их к тексту, который можно немного изменить и ввести как
+    код в связанный файл py. Это делает для
+    более простой код для сценариев, которые используют pyui 
+    файл, который будет объединен в один файл py. Атрибуты 
+    отображаются в консоли и записываются в буфер обмена
+    для легкого копирования в скрипт Py.
 
 #---Contributions: The idea for this script came from a 
     thread on the Pythonista forum here:

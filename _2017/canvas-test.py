@@ -6,7 +6,7 @@ import canvas
 import colorsys
 from six.moves import range
 
-#this crashes Pythonista 2 and 3. canvas depracated?
+#это разбивает Pythonista 2 и 3. холст испорчен?
 
 w=h=512
 canvas.set_size(w,h)

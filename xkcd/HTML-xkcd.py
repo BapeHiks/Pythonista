@@ -2,8 +2,8 @@
 
 # https://forum.omz-software.com/topic/2961/ui-webview-in-an-extension/3
 
-# The HTML I'm using works everywhere, but not loaded through in an extension. That's my whole goal, I am trying to replace webbrowser.open("local file") for use in an extension. I haven't tried to load a local image using my HTML doc, I'll try that out.
-# Here is an example of my HTML when I point it at "http://xkcd.com"
+# HTML-код, который я использую, работает везде, но не загружается в расширение. Это моя цель, я пытаюсь заменить webbrowser.open("local file") для использования в расширении. Я не пытался загрузить локальное изображение, используя мой HTML документ, я попробую это. 
+# Вот пример моего HTML, когда я указываю на "http://xkcd.com"
 
 # Here is my full code (cleaned and formatted, but just as dysfunctional when used as an extension):
 

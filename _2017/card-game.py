@@ -2,7 +2,7 @@
 
 # Card Game
 #
-# In this game, you have to find matching pairs of cards.
+# В этой игре вы должны найти подходящие пары карт.
 # This scene consists entirely of layers and demonstrates some
 # interesting animation techniques.
 

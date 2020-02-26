@@ -3,23 +3,23 @@
 
 # https://gist.github.com/TutorialDoctor/dda76e58fc43d7375856
 
-intro = '''Удалите кавычки по разделам для запуска кода в ней\n'''
+intro = '''Удалите тройные кавычки вокруг разделов, чтобы запустить код в них\n'''
 __version__ = "0.2"
 __py_version__ = "2.7x"
-print("Версия: "+__version__+'\nPython: '+__py_version__+'\n')
-print(intro)
+print "Version: "+__version__+'\nPython: '+__py_version__+'\n'
+print intro
 
 def title1(name=''):
-	print('\n' + name.upper() + ':')
-	print('-'*65)
+	print '\n' + name.upper() + ':'
+	print '-'*65
 	
 def title2(name=''):
-	print('\n' + name.capitalize())
-	print('-'*65)
+	print '\n' + name.capitalize()
+	print '-'*65
 	
 def newline():
 	print('')
-#-------------------------
+#--------------------------------------------
 
 
 # TABLE OF CONTENTS
@@ -77,34 +77,34 @@ Comming soon
 #--------------------------------------------
 
 
-print("\n*** Beginner code follows this line: ***\n")
+print "\n*** Beginner code follows this line: ***\n"
 # *** BEGINNER ***
 # PRINTING
 title1('printing')
-#------------------------------
-
-# Распечатать строку
+#--------------------------------------------
+"""
+# Print a string
 print "Hello World"
 
-# Распечатать несколько строк
-print "Привет", "Мир"
+# Print multiple strings
+print "Hello","World"
 
-# Соединить / объединить две строки (выдает ошибки, если не строки)
-print "Привет" + "Мир"
+# Join/Concatenate two strings (gives errors if not strings)
+print "Hello" + "World"
 
-# Соединение двух строк с пробелами
-print "Привет" + " Мир"
+# Joining two strings with spaces
+print "Hello" + " World"
 
-# Печать номеров
+# Printing numbers
 print 27
 
-# Еще один способ печати (только в Python 3+)
+# Another way to print (only way in python 3+)
 print("Hello World")
-# Я обновил операторы печати в этом скрипте для пользователей Python 3
+#I've updated the print statements in this script for python 3 users
 
-# Вывести пустую строку (полезно для разделения вывода кода)
+# Print an empty line (useful for separating code output)
 print('')
-
+"""
 #--------------------------------------------
 
 
@@ -113,10 +113,10 @@ title1('input')
 #--------------------------------------------
 """
 # Get number input (works for words and numbers in python 3+)
-input("How old are you ")
+input("Сколько тебе лет ")
 
 # Get word/string input
-raw_input("What is your name ")
+raw_input("Как Вас зовут ")
 """
 #--------------------------------------------
 
@@ -124,7 +124,7 @@ raw_input("What is your name ")
 # OPERATORS
 title1('operators')
 #--------------------------------------------
-"""
+
 # Adding
 print(1+2)
 
@@ -153,7 +153,7 @@ print(5==6) #is equal to
 print(3==3)
 print(4!=4) #not equal to
 print(4!=9)
-"""
+
 #--------------------------------------------
 
 
@@ -1025,14 +1025,14 @@ print(content.read())
 #--------------------------------------------
 
 
-print("\n*** Advanced code follows this line: ***\n")
+print "\n*** Advanced code follows this line: ***\n"
 # *** ADVANCED ***
 #--------------------------------------------
 None
 #--------------------------------------------
 
 
-print("\n*** Popular Modules code follows this line: ***\n")
+print "\n*** Popular Modules code follows this line: ***\n"
 # *** POPULAR MODULES ***
 #--------------------------------------------
 # Date and Time
@@ -1290,7 +1290,7 @@ import tokenize
 #--------------------------------------------
 
 
-print("\n*** Example code follows this line: ***\n")
+print "\n*** Example code follows this line: ***\n"
 # *** EXAMPLES ***
 #--------------------------------------------
 None

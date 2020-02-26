@@ -1,6 +1,6 @@
 # https://github.com/zacbir/pythonista
 
-# pythonista doubles pixels on a retina display, so you really only need half size
+# Pythonista удваивает пиксели на дисплее сетчатки, так что вам действительно нужно только половина размера
 ipad = (512.0, 512.0)
 ipad_r = (1024.0, 1024.0)
 ipad_r_ios7 = (1262.0, 1262.0)

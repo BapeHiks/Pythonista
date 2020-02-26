@@ -1,17 +1,19 @@
+#coding: utf-8
 import ui
 
 class RootView(ui.View):
     def __init__(self):
-        '''Children must call RootView.__init__(self), in order to set up hidden webview!'''
+        '''Дети должны позвонить RootView.__init__(self), для того, чтобы настроить скрытое веб-представление!'''
         self.__w=ui.WebView(frame=(1,1,1,1))
         self.add_subview(self.__w)
         
     @staticmethod
     def convert_point(point=(0,0),from_view=None,to_view=None):
-        '''fixed convert point for fullscreen application.
-        works for any present type
-        existing function in fullscreen reports relative to portrait
-        TODO: does not work if from_view or to_view has been Transformed'''
+        '''фиксированная точка конвертации для полноэкранного приложения.
+        работает для любого существующего типа 
+        существующая функция в полноэкранных отчетах
+        относительно портрета
+        TODO: не работает, если from_view или to_view было преобразовано'''
 
         (w,h)=ui.get_screen_size()
 

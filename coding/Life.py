@@ -1,30 +1,31 @@
+#!python2
+# coding: utf-8
 # https://forum.omz-software.com/topic/2291/share-code-for-beginners-like-me-the-python-help-function
 
-# coding: utf-8
 
 class SolveTheWorldsProblems(object):
     '''
     Description:
-        its not possible
+        это невозможно
         
     Args:
-        the meaning of life
+        смысл жизни
             
     Returns:
         -optimisim 
         
     Raises:
-        more questions that can be answered
+        больше вопросов, на которые можно ответить
     '''
     def __init__(self, meaning_of_life):
         '''
-            the comment for the __init__ method
+            комментарий для метода __init__
         '''
         self.meaning_of_life = meaning_of_life
         
     def result(self):
         '''
-            the comment for the result method
+            комментарий к методу результата
         '''
         return ('optimism')
         

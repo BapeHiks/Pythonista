@@ -24,7 +24,7 @@ def make_button(title, screen_x, super_view):
 	frame=(screen_x, h - 124, bw, bh),
 	tint_color='white',
 	title=title)
-	# it seems to be necessary to reset the frame
+	# кажется, необходимо сбросить кадр
 	button.frame = (screen_x, h - 124, bw, bh)
 	super_view.add_subview(button)
 	return button

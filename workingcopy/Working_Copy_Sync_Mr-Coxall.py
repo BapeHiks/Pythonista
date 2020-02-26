@@ -27,7 +27,7 @@ class WorkingCopySync():
 		return os.path.join(self.repo, self.path)
 
 	def _get_key(self):
-		''' Retrieve the working copy key or prompt for a new one.
+		''' Получите ключ рабочей копии или запросите новый.
 		'''
 		key = keychain.get_password('wcSync', 'xcallback')
 		if not key:
@@ -36,7 +36,7 @@ class WorkingCopySync():
 		return key
 
 	def _find_install_path(self):
-		''' Dynamically find the installation path for the script
+		''' Динамически найти путь установки для скрипта
 		'''
 		app_dir = os.path.realpath(os.path.abspath(os.path.dirname(__file__)))
 		docs_dir = os.path.expanduser('~/Documents')
@@ -58,7 +58,7 @@ class WorkingCopySync():
 		wb.open(url)
 
 	def _get_repo_list(self):
-		console.hud_alert('This may take a few seconds.', 'error')
+		console.hud_alert('Это может занять несколько секунд.', 'error')
 		action = 'repos'
 		fmt = 'pythonista://{install_path}/Working_Copy_Sync.py?action=run&argv=repo_list&argv='
 		payload = {
@@ -67,12 +67,12 @@ class WorkingCopySync():
 		self._send_to_working_copy(action, payload)
 
 	def copy_repo_from_wc(self, repo_list=None):
-		''' copy a repo to the local filesystem
+		''' скопировать репо в локальную файловую систему
 		'''
 		if not repo_list:
 			self._get_repo_list()
 		else:
-			repo_name = dialogs.list_dialog(title='Select repo', items=repo_list)
+			repo_name = dialogs.list_dialog(title='Выберите репо', items=repo_list)
 			if repo_name:
 				action = 'zip'
 				fmt = 'pythonista://{install_path}/Working_Copy_Sync.py?action=run&argv=copy_repo&argv={repo_name}&argv='
@@ -98,7 +98,7 @@ class WorkingCopySync():
 	def push_pyui_to_wc(self):
 		pyui_path, pyui_contents = self._get_pyui_contents_for_file()
 		if not pyui_contents:
-			console.alert("No PYUI file associated. Now say you're sorry.",
+			console.alert("Файл PYUI не связан. Теперь скажи, что ты извиняешься.",
 				button1="I'm sorry.", hide_cancel_button=True)
 		else:
 			self._push_file_to_wc(pyui_path, pyui_contents)
@@ -132,11 +132,11 @@ class WorkingCopySync():
 
 	def present(self):
 		actions = OrderedDict()
-		actions['CLONE 	- Copy repo from Working Copy'] = self.copy_repo_from_wc
-		actions['FETCH 	- Overwrite file with WC version'] = self.overwrite_with_wc_copy
-		actions['PUSH 		- Send file to WC'] = self.push_current_file_to_wc
-		actions['PUSH UI 	- Send associated PYUI to WC'] = self.push_pyui_to_wc
-		actions['OPEN 		- Open repo in WC'] = self.open_repo_in_wc
+		actions['CLONE 	- Скопировать репо из Рабочей копии'] = self.copy_repo_from_wc
+		actions['FETCH 	- Перезаписать файл версией WC'] = self.overwrite_with_wc_copy
+		actions['PUSH 		- Отправить файл в WC'] = self.push_current_file_to_wc
+		actions['PUSH UI 	- Отправить связанный PYUI в WC'] = self.push_pyui_to_wc
+		actions['OPEN 		- Открыть репо в WC'] = self.open_repo_in_wc
 		action = dialogs.list_dialog(title='Choose action', items=[key for key in actions])
 		if action:
 			actions[action]()
@@ -150,7 +150,7 @@ class WorkingCopySync():
 		except OSError as e:
 			if e.errno != errno.EEXIST:
 				raise e
-			console.alert('Overwriting existing directory', button1='Continue')
+			console.alert('Перезаписать существующий каталог', button1='Continue')
 			shutil.rmtree(dest)
 		zip_file_location = os.path.join(docs_dir, tmp_zip_location)
 		with open(zip_file_location, 'w') as out_file:
@@ -185,7 +185,7 @@ def main(url_action=None, url_args=None):
 	elif url_action == 'repo_list':
 		wc.copy_repo_from_wc(repo_list=[repo['name'] for repo in json.loads(url_args[0])])
 	else:
-		msg = "Not a valid URL scheme action. Now say you're sorry."
+		msg = "Недопустимое действие схемы URL. Теперь скажи, что ты извиняешься."
 		console.alert(msg, button1="I'm sorry.", hide_cancel_button=True)
 
 if __name__ == "__main__":

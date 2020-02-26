@@ -2,7 +2,7 @@
 
 # https://github.com/jsbain/objc_hacks/blob/master/apphack.py
 
-''' A set of tools to add or delete custom buttons from the toolbar.  This may not be super robust, but seems to work ok.  Button objects and actions are saved so they survive global clearing, but thid has not been tested extensively.  If a function relies on imports that occured outside of the function, these might dissappear -- user must make sure those modules are added to a module that is kept by pythonista, such as anything in site-packages, or name starting with __   '''
+''' Набор инструментов для добавления или удаления пользовательских кнопок на панели инструментов. Это может быть не очень надежно, но, кажется, работает нормально. Объекты кнопок и действия сохраняются, поэтому они сохраняются после глобальной очистки, но они не были тщательно протестированы. Если функция полагается на импорт, который произошел за пределами функции, они могут исчезнуть - пользователь должен убедиться, что эти модули добавлены в модуль, который хранится в pythonista, например что-либо в пакетах сайта, или имя начинается с __   '''
 
 from objc_util import *
 import ui,console
@@ -24,7 +24,7 @@ def get_toolbar(view):
 		if tb:
 			return tb
 def create_toolbar_button(action,image,index=0,tag=''):
-	'''create a button on main toolbar, with action,imagename, index location, and string tagname.  button and action are stored in __persistent_views[index].  tag allows finding view using tb.viewFromTag_(hash(tag)) (old idea)'''
+	'''Создайте кнопку на главной панели инструментов с действием, именем изображения, местоположением индекса и строковым тэгом. кнопка и действие хранятся в __persistent_views[index].  тег позволяет найти вид с помощью tb.viewFromTag_(hash(tag)) (old idea)'''
 	assert(callable(action))
 	
 	tb=get_toolbar(main_view)
@@ -33,11 +33,11 @@ def create_toolbar_button(action,image,index=0,tag=''):
 		__persistent_views
 	except NameError:
 		__persistent_views={}
-	#check for existing button in this index and delete if needed
+	#проверить наличие кнопки в этом индексе и удалить при необходимости
 	remove_toolbar_button(index)
 	
-	#add new button to the left of the rightbuttons.  index 0 is next to left buttons, index 1 is further left, etc
-	#store so it is not cleared.
+	#добавить новую кнопку слева от правой кнопки. Индекс 0 находится рядом с левыми кнопками, индекс 1 дальше слева и т. д.
+	#хранить, чтобы он не очищался.
 	
 	btn=ui.Button( frame=(tb.size().width -
 	tb.rightItemsWidth()-(index+1)*40,22,40,40))
@@ -60,7 +60,7 @@ def remove_toolbar_button(index):
 		
 if __name__=='__main__':
 	def run_script(sender):
-		'''run a script without clearing glbals'''
+		'''запустить скрипт без очистки glbals'''
 		import editor
 		editor.reload_files()
 		execfile(editor.get_path(),globals())

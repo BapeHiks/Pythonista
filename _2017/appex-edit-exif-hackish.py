@@ -15,5 +15,5 @@ def assets_for_attachments(attachments):
 	
 attachments = appex.get_attachments()
 assets = assets_for_attachments(attachments)
-# Now you can use the photos module to manipulate the assets... (as in previous example)
+# Теперь вы можете использовать модуль photos для управления активами ... (как в предыдущем примере)
 

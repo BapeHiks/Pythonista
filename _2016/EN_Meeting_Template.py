@@ -1,6 +1,6 @@
 # https://gist.github.com/Moving-Electrons/7000517
 
-# This script uses Evernote's API to create a new template note to be used in meetings. 
+# Этот сценарий использует API Evernote для создания новой заметки шаблона для использования на собраниях.
 # The template includes the following fields: Date, Time, Attendance, Objective, Remarks and 
 # Action Items. The fields are shown using Evernote Markup Language. It also automatically 
 # adds the the date when the note was created at the end of the note's title.
@@ -23,7 +23,7 @@
 ntbkName = "Work"
 auth_token = "INSERT YOUR EVERNOTE TOKEN HERE"
 
-# This assumes that this script is in the root folder, and the Evernote SDK
+# Предполагается, что этот скрипт находится в корневой папке, а Evernote SDK
 # is installed in the 'evernote-sdk' directory, using this installer script:
 # https://gist.github.com/5048588
 

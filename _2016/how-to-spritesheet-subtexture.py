@@ -3,7 +3,7 @@
 from scene import *
 x,y,xs,ys = 0,0,1,1
 
-# Above sets up the initial subtexture(Rect(x,y,xs,ys)) on line 25 to show the full image until touch_began and touch_ended changes the coordinates of the subtexture to show whatever section you set in touch began.
+# Выше настраивает начальный  initial subtexture(Rect(x,y,xs,ys)) в строке 25, чтобы отобразить полное изображение, пока touch_began и touch_ended не изменят координаты субтекстуры, чтобы показать, какой раздел вы установили при прикосновении.
 
 class MyScene (Scene):
     def setup(self):
@@ -15,7 +15,7 @@ class MyScene (Scene):
         parent = self)
         
     def touch_began(self, touch):
-        global x,y,xs,ys #These variables must be referenced as global or they will not be recognized.
+        global x,y,xs,ys #Эти переменные должны называться глобальными, иначе они не будут распознаны.
         
         x,y,xs,ys = 0,0,.5,1 #This changes the coordinates for update() on line 25 to show a portion of the texture.
     

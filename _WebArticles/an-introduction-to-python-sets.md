@@ -4,7 +4,7 @@ _Captured: 2017-06-27 at 20:49 from [dzone.com](https://dzone.com/articles/an-in
 
 Effortlessly power IoT, predictive analytics, and machine learning applications with an [elastic, resilient data infrastructure](https://dzone.com/go?i=207144&u=https%3A%2F%2Fmesosphere.com%2Fsolutions%2Fdata%2F%3Futm_source%3Ddzone%26utm_medium%3Dbig-data%26utm_term%3Dpre-article%26utm_content%3D101). Learn how with [Mesosphere DC/OS](https://dzone.com/go?i=207144&u=https%3A%2F%2Fmesosphere.com%2Fproduct%2F%3Futm_source%3Ddzone%26utm_medium%3Dbig-data%26utm_term%3Dpre-article%26utm_content%3D101).
 
-Python supports sets, which are a collection of unique elements and provide operations for computing set unions, intersections, and differences.
+Python поддерживает наборы, которые представляют собой набор уникальных элементов и обеспечивают операции для объединения объединений, пересечений и различий.
 
 ## Introduction
 

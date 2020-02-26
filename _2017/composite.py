@@ -11,13 +11,12 @@ from types import SimpleNamespace as sn
 import numbers
 
 class Composite(View):
-  """ Simple pass-thru view that maintains a composite stack of other views. Captures position and size changes but passes all other changes to the stack of contained views. """
+  """ Простое сквозное представление, которое поддерживает составной стек других представлений. Захватывает изменения положения и размера, но передает все другие изменения в стек представлений."""
   
   def __init__(self, *view_classes, frame=(0, 0, 100, 100), **kwargs):
-    """ Accepts view classes or instances as 
-    parameters, followed by normal View keyword 
-    parameters. Classes are instantiated with no 
-    arguments, instances are used as is. """
+    """ Принимает просмотр классов или экземпляров как параметры,
+    сопровождаемые обычным ключевым словом View параметры.
+    Классы создаются без аргументы, экземпляры используются как есть. """
     
     super().__init__(**kwargs)
     self._contained = Container(self, *view_classes)

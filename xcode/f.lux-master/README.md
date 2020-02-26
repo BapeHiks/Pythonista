@@ -1,43 +1,37 @@
 f.lux-xcode
 ===========
+При этом приложение iOS для f.lux устанавливается на ваше устройство без джейлбрейка. Узнайте больше о f.lux на <https://justgetflux.com/>
 
-This installs the f.lux iOS app on your device without requiring a jailbreak.
-Learn more about f.lux at <https://justgetflux.com/>
-
-Why isn't this in the app store?
+Почему это не в магазине приложений?
 --------------------------------
 
-This app changes the color of all running apps on your phone, even when f.lux is
-not directly open. Such functionality is not allowed in the [App Store Review
-Guidelines](<https://developer.apple.com/app-store/review/guidelines/>), however
-this type of app is possible.
+Это приложение меняет цвет всех запущенных приложений на вашем телефоне, даже если f.lux не открыто напрямую. Такая функциональность не допускается в [App Store Review
+Guidelines](<https://developer.apple.com/app-store/review/guidelines/>), тем не мение этот тип приложения возможен.
 
-How do I get this on my phone?
+Как я могу получить это на моем телефоне?
 ------------------------------
 
-1.  Download (click releases above for file), then open with XCode
+1.  Загрузите (нажмите релизы выше для файла), затем откройте с XCode
 
-2.  Plug in your phone
+2.  Подключите свой телефон
 
-3.  Select your phone from the device menu (next to the "Play" and "Stop"
-    buttons)
+3.  Выберите свой телефон из меню устройства (рядом с «Play» и «Stop»     кнопки)
 
 4.  Click "Play"
 
-How does it work?
+Как это работает?
 -----------------
 
-There is an opaque, non-open-source app called `iflux` in this project. We trick
-Xcode into signing and installing this app on your phone by:
+Существует непрозрачное приложение с открытым исходным кодом, которое называется`iflux` в этом проекте. Мы обманули Xcode подписать и установить это приложение на свой телефон с помощью:
 
-1.  Building a dummy app "just an app"
+1.  Создание фиктивного приложения"just an app"
 
-2.  Splicing in the opaque binary during the build process
+2.  Сплайсинг в непрозрачном двоичном файле во время процесса сборки
 
-3.  Letting Xcode sign and install the app as normal
+3.  Позвольте Xcode подписать и установить приложение как обычно
 
 There are build errors
 ----------------------
 
-We are building the binary twice, once using source code, and again by splicing.
-This duplication is reported as an error by XCode.
+Мы строим двоичный файл дважды, один раз с использованием исходного кода, и снова с помощью сплайсинга.
+Это дублирование сообщается как ошибка XCode.

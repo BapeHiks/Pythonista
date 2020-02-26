@@ -1,5 +1,7 @@
+#!python2
+#coding: utf-8
 # https://gist.github.com/balachandrana/4e9accfc894785682f230c54dc5da816#file-ui-py
-
+"""кнопка"""
 # https://forum.omz-software.com/topic/3964/unipage-as-a-bridge-between-kivy-and-pythonista/5
 
 import ui
@@ -8,7 +10,7 @@ def closepage(sender):
 	v.close()
 	
 def function_1(sender):
-	v['label1'].text = 'Oh! You clicked my button.'
+	v['label1'].text = 'Ой! Вы нажали мою кнопку.'
 	
 #uncomment or comment lines below based on platform
 #v = ui.MainView(frame=(0, 0, 600, 450)) # kivy

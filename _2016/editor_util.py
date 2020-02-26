@@ -1,7 +1,7 @@
+#coding: utf-8
 # https://github.com/lukaskollmer/pythonista/blob/master/pythonista/editor_util.py#L28
-
 """
-Use this module to change the editor and console font programatically
+Модуль для программного изменения шрифта редактора и консоли
 """
 
 __author__ = "Lukas Kollmer<lukas.kollmer@gmail.com>"

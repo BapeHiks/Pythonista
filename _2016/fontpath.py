@@ -2,7 +2,7 @@
 
 # https://forum.omz-software.com/topic/3933/get-bezier-path-from-text/2
 
-#  I think you need to set restype and argtypes for CTFontCreatePathForGlyph. It may happen to work for you because you are using (I think) a 32-bit device.
+#  Я думаю, что вам нужно установить restype и argtypes для CTFontCreatePathForGlyph. Это может сработать для вас, потому что вы используете (я думаю) 32-разрядное устройство.
 
 from objc_util import *
 import ui
